@@ -2,7 +2,7 @@
 
 brAudio is a lightweight audio library I wrote for my game engine (In progress). It is built on top of [FMOD audio](https://www.fmod.com/resources/documentation-api?version=2.1&page=welcome.html). This is my first time writting an audio engine, this is not a finished robust product.
 
-## Supports
+## Support
 - Sound loading and streaming
 - Audio sources with media control
 - 3D audio
@@ -16,7 +16,7 @@ brAudio is a lightweight audio library I wrote for my game engine (In progress).
 - Multiple audio listener support
 - Integrate with [brMath](https://github.com/alejandrodlsp/brMath)
 
-## Example
+## Examples
 Load sounds
 ```cpp
 // Load sound as a stream
@@ -75,4 +75,3 @@ while(true)
 // Clean-up
 AudioListener::GetInstance()->ReleaseSystem();
 ```
-
