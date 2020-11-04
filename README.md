@@ -52,8 +52,8 @@ backgroundSource.SetActiveSound(&loadedSound);
 
 Create and assign an Audio Group
 ```cpp
-AudioGroup masterGroup;
-AudioGroup sfxGroup(masterGroup);
+AudioGroup masterGroup; // Master group
+AudioGroup sfxGroup(masterGroup); // Audio group child of master group
 backgroundSource.SetAudioGroup(sfxGroup);
 ```
 
