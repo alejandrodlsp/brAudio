@@ -28,33 +28,33 @@ Sound loadedSound("res/sound/birds.mp3", false);
 Creating an Audio Source
 ```cpp
 // Create audio source (sound, volume, pitch, looping)
-AudioSource* backgroundSource = new AudioSource(&streamedSound, 1.0f, 1.0f, true);
+AudioSource backgroundSource(&streamedSound, 1.0f, 1.0f, true);
 ```
 
 Manage an audio source
 ```cpp
 // Play audio source
-backgroundSource->Play();
+backgroundSource.Play();
 
 // Control audio source
-backgroundSource->Pause();
-backgroundSource->Mute(true);
-backgroundSource->Resume();
+backgroundSource.Pause();
+backgroundSource.Mute(true);
+backgroundSource.Resume();
 
 // Set audio source parameters
-backgroundSource->Set3DPosition({ 1.0, 0.0, 1.0 });
-backgroundSource->SetPitch(0.5f);
-backgroundSource->SetVolume(0.5f);
+backgroundSource.Set3DPosition({ 1.0, 0.0, 1.0 });
+backgroundSource.SetPitch(0.5f);
+backgroundSource.SetVolume(0.5f);
 
 // Change source's sound
-backgroundSource->SetActiveSound(&loadedSound);
+backgroundSource.SetActiveSound(&loadedSound);
 ```
 
 Create and assign an Audio Group
 ```cpp
 AudioGroup masterGroup;
 AudioGroup sfxGroup(masterGroup);
-backgroundSource->SetAudioGroup(sfxGroup);
+backgroundSource.SetAudioGroup(sfxGroup);
 ```
 
 Manage an audio group
